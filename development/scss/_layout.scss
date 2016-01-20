@@ -5,8 +5,7 @@ html {
 }
 
 body {
-  font-size: 10px;
-  font-size: 1.0rem;
+  font-size: 1.6em;
 }
 
 [id="header"] {
@@ -18,8 +17,14 @@ body {
 }
 
 [id="nav"] {
-  width: 40%;
+  width: 10%;
   float: right;
+}
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
 }
 
 [id="contents"] {
@@ -28,7 +33,7 @@ body {
 }
 
 [id="footer"] {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 980px;
 }
 
