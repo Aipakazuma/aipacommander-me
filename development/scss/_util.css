@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+// margin paddingの汎用プロパティ
+$boxProperty: (m:margin, p:padding);
+$boxType: (t:top, r:right, l:left, b:bottom);
+@each $propertyK, $propertyV in $boxProperty {
+  @for $i from 0 through 100 {
+    @each $k, $v in $boxType {
+      .#{$propertyK}#{$k}#{$i} {
+        #{$propertyV}-#{$v}: #{$i}px !important;
+      }
+    }
+  }
+}
+
+// widthの汎用プロパティ
+@for $i from 1 through 100 {
+  .w#{$i} {
+    width: #{$i}%;
+  }
+}
+.taL { text-align:left; }
+.taC { text-align:center; }
+.taR { text-align:right; }
+.flL { float:left; }
+.flR { float:right; }
+
+// clearfix
+.cf {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// font
+.fwB { font-weight:bold;}
+.fwN { font-weight:normal !important;}
+
+// font-size
+@for $i from 10 through 20 {
+  .fs#{$i} {
+    font-size: #{$i}px !important;
+  }
+}

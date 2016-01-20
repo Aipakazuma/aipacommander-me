@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.h1 {
+  font-size: 33px;
+  font-size: 3.3rem;
+  width: 60%;
+  float: left;
+}
+
+.h2 {
+  font-size: 20px;
+  font-size: 3.0rem;
+  font-weight: 700;
+}
+
+.heading-style {
+  color: #78a15a;
+}
+
+.menu > li {
+  float: left;
+  width: 20%;
+}
+
+.list > li {
+  list-style: circle;
+  margin: 10px 0 10px 20px;
+}

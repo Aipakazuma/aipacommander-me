@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 10px;
+  font-size: 1.0rem;
+}
+
+[id="header"] {
+  width: 100%;
+  background: #98b880;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+[id="nav"] {
+  width: 40%;
+  float: right;
+}
+
+[id="contents"] {
+  margin: 0 auto;
+  width: 980px;
+}
+
+[id="footer"] {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}

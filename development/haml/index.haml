@@ -1,13 +1,38 @@
 !!! 5
-%html
+%html{lang: "ja"}
+  %head
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1"}
+    %meta{charset: "utf-8"}
+    %link{rel: "stylesheet", href: "./css/app.css"}
+    %title アイパー隊長のサイト
   %body
-    %div.container
-      %header
-        %h1 title
-        %h2 subtitle
-      %div.contents
-        %div.single-box
-          %h2.box-title
-          %p.box-discription
-      %footer
-        %p unitopi. All rights reserved.
+    %header#header.mb30
+      %div.container.cf
+        %h1.h1 アイパー隊長のサイト
+        %nav#nav
+          %ul.menu.cf
+            %li 
+              %a{href: "#"} About
+            %li
+              %a{href: "#"} Contact
+    %div#contents.mb30
+      %h2.h2.heading-style.mb10 Who are you
+      %p.text.mb30 プログラマーです。沖縄滞在。
+      %h2.h2.heading-style.mb10 Language
+      %div.text.mb30
+        %ul.list
+          %li 日本語: OK
+          %li 英語: 全然ダメ。勉強中
+          %li Css: 仕事で使用
+          %li Html: 仕事で使用
+          %li Java: 趣味レベル
+          %li JavaScript: 仕事で使用
+          %li PHP: OK
+          %li Python: 趣味レベル だけど、これが一番好き
+          %li R: 趣味レベル 勉強中
+          %li Scala: 趣味レベル 勉強中
+          %li Swift: 趣味レベル 勉強中
+          %li SQL: 仕事で使用
+      %h2.h2.heading-style.mb10 Favorite
+    %footer#footer
+      %p Commander aipa site.

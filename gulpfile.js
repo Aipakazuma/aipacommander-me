@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 var haml = require('gulp-ruby-haml');
 gulp.task('haml', function() {
   gulp.src(documentRoot + development + 'haml/**/*.haml')
-    .pipe(haml())
+    .pipe(haml({doubleQuote: true}))
     .pipe(gulp.dest(documentRoot + publicFolder));
 });
 
@@ -36,6 +36,6 @@ gulp.task('watch', function() {
     gulp.start('sass');
   });
   watch(hamlDirectory, function() {
-      gulp.start('haml');
+    gulp.start('haml');
   });
 });
