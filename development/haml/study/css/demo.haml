@@ -1,0 +1,106 @@
+!!! 5
+%html{lang: "ja"}
+  %head
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1"}
+    %meta{charset: "utf-8"}
+    %link{rel: "stylesheet", href: "../../css/app.css"}
+    %link{rel: "stylesheet", href: "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css"}
+    %script{src: "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"}
+    %title Commander Aipa
+    :javascript
+      hljs.initHighlightingOnLoad();
+  %body
+    %div.container
+      %div.row
+        %h1.h1 Position デモページ
+        %pre
+          %code
+            :preserve
+              .demo_div {
+                position: relative;
+                background: #eee;
+                height: 50px;
+              }
+              .demo_position_static > p {
+                position: static;
+                top: 20px;
+              }
+              .demo_position_relative > p {
+                position: relative;
+                top: 20px;
+              }
+              .demo_position_absolute > p {
+                position: absolute;
+                top: 20px;
+                right: 0;
+              }
+              .demo_position_fixed > p {
+                position: fixed;
+                top: 20px;
+                right: 0;
+                color: #f00;
+                font-weigth: bold;
+                font-size: 24px;
+              }
+
+        %pre
+          %code
+            = preserve do
+              :escaped
+                <div class="demo_position_static">
+                  <p>static</p>
+                </div>
+
+                <div class="demo_position_relative">
+                  <p>relative</p>
+                </div>
+
+                <div class="demo_position_absolute">
+                  <p>absolute</p>
+                </div>
+
+                <div class="demo_position_fixed">
+                  <p>fixed</p>
+                </div>
+    
+    %div.container
+      %div.row
+        %div.mt40
+          :css
+            .demo_div {
+              position: relative;
+              background: #eee;
+              height: 50px;
+            }
+            .demo_position_static > p {
+              position: static;
+              top: 20px;
+            }
+            .demo_position_relative > p {
+              position: relative;
+              top: 20px;
+            }
+            .demo_position_absolute > p {
+              position: absolute;
+              top: 20px;
+              right: 0;
+            }
+            .demo_position_fixed > p {
+              position: fixed;
+              top: 20px;
+              right: 0;
+              color: #f00;
+              font-weigth: bold;
+              font-size: 24px;
+            }
+          %div.demo_div.mt30.demo_position_static
+            %p static
+
+          %div.demo_div.mt30.demo_position_relative
+            %p relative
+
+          %div.demo_div.mt30.demo_position_absolute
+            %p absolute
+
+          %div.demo_div.mt30.demo_position_fixed
+            %p fixed

@@ -42,6 +42,10 @@ body {
   width: 980px;
   margin: 0 auto;
 }
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 @media screen and (max-width: 768px) {
   .container {

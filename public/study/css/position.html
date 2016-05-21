@@ -4,14 +4,21 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <meta charset="utf-8">
     <link href="../../css/app.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <title>Commander Aipa</title>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <h1 class="h1">Position</h1>
         <h2 class="h2 mt40">Positionとは？</h2>
-        <p class="mt30">cssのプロパティです。ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。</p>
+        <p class="mt30">
+          cssのプロパティ。ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。（なんのこっちゃ）
+        </p>
         <p class="mt30">
           <span class="code">positon</span>
           プロパティでは、配置方法を指定し、位置は
@@ -19,40 +26,55 @@
           <span class="code">left</span>
           <span class="code">right</span>
           <span class="code">bottom</span>
-          と、併用して利用します。
+          と、併用して利用するとのこと
+        </p>
+        <h3 class="mt20">過去使ってきた経験</h3>
+        <p class="mt30">
+          <span class="code">div</span>
+          で、囲んだ中で左上に要素を持っていきたいとか、windowの中で固定したいとかで使ったことがある。
+          人によっては、構造がメンテしづらくなるので、あまり使っちゃダメーって意見もあった（正しいかどうかはわからんけど）
         </p>
         <h2 class="h2 mt40">使い方</h2>
         <dl class="same-line border-color cf">
           <dt>static</dt>
           <dd>
+            初期値。
             特に配置方法を指定しません。この値のときには、
             <span class="code">top</span>
             <span class="code">bottom</span>
             <span class="code">left</span>
             <span class="code">right</span>
-            は適用されません。これが初期値です。
+            は適用されない。
+            どんなの時に使うの？ レスポンシブとかで戻すときじゃない？
           </dd>
           <dt>relative</dt>
           <dd>
-            相対位置への配置となります。
+            相対位置への配置
             <span class="code">position: static</span>
-            を指定した場合に表示される位置が基準位置となります。
+            を指定した場合に表示される位置が基準位置となる。
+            <span class="code">position:relative</span>
+            した子要素で、他の
+            <span class="code">position</span>
+            を使うイメージ
           </dd>
           <dt>absolute</dt>
           <dd>
-            絶対位置への配置となります。親ボックスに
+            絶対位置への配置。親要素に
             <span class="code">position: static</span>
-            以外の値が指定されている場合には、親ボックスの左上が基準位置となります。親ボックスに
+            以外の値が指定されている場合には、親要素左上が基準位置となります。親要素に
             <span class="code">position: static</span>
-            以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となります。
+            以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となる。
           </dd>
           <dt>fixed</dt>
           <dd>
             絶対位置への配置となるのは
             <span class="code">position: absolute</span>
-            と同じですが、スクロールしても位置が固定されたままとなります。
+            と同じだけど、スクロールしても位置が固定されたままとなる。
+            何故かiosでバグがある。。。！（今回それを勉強するためにこのサイトを用意したといっても過言ではない）
           </dd>
         </dl>
+        <h3 class="mt30">試す</h3>
+        <a href="demo.html">デモ</a>
       </div>
     </div>
   </body>

@@ -4,14 +4,19 @@
     %meta{name: "viewport", content: "width=device-width,initial-scale=1"}
     %meta{charset: "utf-8"}
     %link{rel: "stylesheet", href: "../../css/app.css"}
+    %link{rel: "stylesheet", href: "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css"}
+    %script{src: "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"}
     %title Commander Aipa
+    :javascript
+      hljs.initHighlightingOnLoad();
   %body
     %div.container
       %div.row
         %h1.h1 Position
 
         %h2.h2.mt40 Positionとは？
-        %p.mt30 cssのプロパティです。ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。
+        %p.mt30
+          cssのプロパティ。ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。（なんのこっちゃ）
         %p.mt30
           %span.code positon
           プロパティでは、配置方法を指定し、位置は
@@ -19,32 +24,48 @@
           %span.code left
           %span.code right
           %span.code bottom
-          と、併用して利用します。
+          と、併用して利用するとのこと
+
+        %h3.mt20 過去使ってきた経験
+        %p.mt30
+          %span.code div
+          で、囲んだ中で左上に要素を持っていきたいとか、windowの中で固定したいとかで使ったことがある。
+          人によっては、構造がメンテしづらくなるので、あまり使っちゃダメーって意見もあった（正しいかどうかはわからんけど）
 
         %h2.h2.mt40 使い方
         %dl.same-line.border-color.cf
           %dt static
           %dd
+            初期値。
             特に配置方法を指定しません。この値のときには、
             %span.code top
             %span.code bottom
             %span.code left
             %span.code right
-            は適用されません。これが初期値です。
+            は適用されない。
+            どんなの時に使うの？ レスポンシブとかで戻すときじゃない？
           %dt relative
           %dd
-            相対位置への配置となります。
+            相対位置への配置
             %span.code position: static
-            を指定した場合に表示される位置が基準位置となります。
+            を指定した場合に表示される位置が基準位置となる。
+            %span.code position:relative
+            した子要素で、他の
+            %span.code position
+            を使うイメージ
           %dt absolute
           %dd
-            絶対位置への配置となります。親ボックスに
+            絶対位置への配置。親要素に
             %span.code position: static
-            以外の値が指定されている場合には、親ボックスの左上が基準位置となります。親ボックスに
+            以外の値が指定されている場合には、親要素左上が基準位置となります。親要素に
             %span.code position: static
-            以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となります。
+            以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となる。
           %dt fixed
           %dd
             絶対位置への配置となるのは
             %span.code position: absolute
-            と同じですが、スクロールしても位置が固定されたままとなります。
+            と同じだけど、スクロールしても位置が固定されたままとなる。
+            何故かiosでバグがある。。。！（今回それを勉強するためにこのサイトを用意したといっても過言ではない）
+
+        %h3.mt30 試す
+        %a{:href => "demo.html"} デモ
