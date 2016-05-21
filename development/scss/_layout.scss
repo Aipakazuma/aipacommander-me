@@ -6,6 +6,7 @@ html {
 
 body {
   font-size: 1.6em;
+  line-height: 1.5;
 }
 
 [id="header"] {
@@ -40,4 +41,14 @@ body {
 .container {
   width: 980px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .row {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }

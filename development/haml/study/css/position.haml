@@ -1,0 +1,50 @@
+!!! 5
+%html{lang: "ja"}
+  %head
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1"}
+    %meta{charset: "utf-8"}
+    %link{rel: "stylesheet", href: "../../css/app.css"}
+    %title Commander Aipa
+  %body
+    %div.container
+      %div.row
+        %h1.h1 Position
+
+        %h2.h2.mt40 Positionとは？
+        %p.mt30 cssのプロパティです。ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。
+        %p.mt30
+          %span.code positon
+          プロパティでは、配置方法を指定し、位置は
+          %span.code top
+          %span.code left
+          %span.code right
+          %span.code bottom
+          と、併用して利用します。
+
+        %h2.h2.mt40 使い方
+        %dl.same-line.border-color.cf
+          %dt static
+          %dd
+            特に配置方法を指定しません。この値のときには、
+            %span.code top
+            %span.code bottom
+            %span.code left
+            %span.code right
+            は適用されません。これが初期値です。
+          %dt relative
+          %dd
+            相対位置への配置となります。
+            %span.code position: static
+            を指定した場合に表示される位置が基準位置となります。
+          %dt absolute
+          %dd
+            絶対位置への配置となります。親ボックスに
+            %span.code position: static
+            以外の値が指定されている場合には、親ボックスの左上が基準位置となります。親ボックスに
+            %span.code position: static
+            以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となります。
+          %dt fixed
+          %dd
+            絶対位置への配置となるのは
+            %span.code position: absolute
+            と同じですが、スクロールしても位置が固定されたままとなります。

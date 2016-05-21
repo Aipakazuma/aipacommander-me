@@ -4,6 +4,7 @@ var minifyCss    = require('gulp-minify-css');
 var watch        = require('gulp-watch');
 var react        = require('gulp-react');
 var flow         = require('gulp-flowtype');
+var haml         = require('gulp-ruby-haml');
 var documentRoot = './';
 var development  = 'development/';
 var publicFolder = 'public/';
@@ -23,11 +24,13 @@ gulp.task('sass', function() {
 // ####################
 // ####### haml #######
 // ####################
-var haml = require('gulp-ruby-haml');
 gulp.task('haml', function() {
   gulp.src(documentRoot + development + 'haml/**/*.haml')
-    .pipe(haml({doubleQuote: true}))
-    .pipe(gulp.dest(documentRoot + publicFolder));
+    .pipe(
+      haml({
+        doubleQuote: true
+      })
+    ).pipe(gulp.dest(documentRoot + publicFolder));
 });
 
 // watch

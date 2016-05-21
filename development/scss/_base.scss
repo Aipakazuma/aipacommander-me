@@ -2,8 +2,10 @@
 
 .h1 {
   font-size: 3.3rem;
-  width: 90%;
-  float: left;
+  &.top {
+    width: 90%;
+    float: left;
+  }
 }
 
 .h2 {
@@ -23,4 +25,42 @@
 .list > li {
   list-style: circle;
   margin: 10px 0 10px 20px;
+}
+
+.code {
+  padding: 3px 10px;
+  border-radius: 3px;
+  background: #000;
+  color: #00FF2F;
+  text-shadow: -3px 3px 10px #00FF2F;
+  white-space: nowrap;
+}
+
+dl {
+  &.same-line {
+    border: 1px solid;
+    border-top: none;
+    width: 100%;
+    background-color: #F5F5F5;
+    overflow: hidden;
+    &.border-color {
+      border-color: #333;
+      box-shadow:0px 0px 6px 3px #eee;
+      -moz-box-shadow:0px 0px 6px 3px #eee;
+      -webkit-box-shadow:0px 0px 6px 3px #eee;
+    }
+    dt {
+      border-top: 1px solid #333;
+      float: left;
+      width: 5em;
+      padding: 5px;
+    }
+    dd {
+      border-left: 1px solid #333;
+      border-top: 1px solid #333;
+      margin-left: 5em;
+      padding: 5px;
+      background: #fff;
+    }
+  }
 }

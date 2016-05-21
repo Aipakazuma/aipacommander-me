@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta charset="utf-8">
+    <link href="../../css/app.css" rel="stylesheet">
+    <title>Commander Aipa</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1 class="h1">Position</h1>
+        <h2 class="h2 mt40">Positionとは？</h2>
+        <p class="mt30">cssのプロパティです。ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。</p>
+        <p class="mt30">
+          <span class="code">positon</span>
+          プロパティでは、配置方法を指定し、位置は
+          <span class="code">top</span>
+          <span class="code">left</span>
+          <span class="code">right</span>
+          <span class="code">bottom</span>
+          と、併用して利用します。
+        </p>
+        <h2 class="h2 mt40">使い方</h2>
+        <dl class="same-line border-color cf">
+          <dt>static</dt>
+          <dd>
+            特に配置方法を指定しません。この値のときには、
+            <span class="code">top</span>
+            <span class="code">bottom</span>
+            <span class="code">left</span>
+            <span class="code">right</span>
+            は適用されません。これが初期値です。
+          </dd>
+          <dt>relative</dt>
+          <dd>
+            相対位置への配置となります。
+            <span class="code">position: static</span>
+            を指定した場合に表示される位置が基準位置となります。
+          </dd>
+          <dt>absolute</dt>
+          <dd>
+            絶対位置への配置となります。親ボックスに
+            <span class="code">position: static</span>
+            以外の値が指定されている場合には、親ボックスの左上が基準位置となります。親ボックスに
+            <span class="code">position: static</span>
+            以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となります。
+          </dd>
+          <dt>fixed</dt>
+          <dd>
+            絶対位置への配置となるのは
+            <span class="code">position: absolute</span>
+            と同じですが、スクロールしても位置が固定されたままとなります。
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>
