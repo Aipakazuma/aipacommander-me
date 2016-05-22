@@ -1,0 +1,77 @@
+!!! 5
+%html{lang: "ja"}
+  %head
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1"}
+    %meta{charset: "utf-8"}
+    %link{rel: "stylesheet", href: "../../css/app.css"}
+    %link{rel: "stylesheet", href: "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css"}
+    %script{src: "https://code.jquery.com/jquery-2.2.4.min.js"}
+    %script{src: "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"}
+    %title Commander Aipa
+    :javascript
+      hljs.initHighlightingOnLoad();
+      $(function(){
+        $('input').each(function(){
+          if(this.type!="text")return;
+          $(this).bind('blur',function(e){
+            window.scrollBy(0,1);
+            setTimeout(function(){window.scrollBy(0,-1)},200);
+          });
+        });
+      });
+  %body
+    %div.container
+      %div.row
+        %h1.h1 Position バグ デモページ
+        %pre
+          %code
+            :preserve
+
+        %pre
+          %code
+            = preserve do
+              :escaped
+    
+    %div.container
+      %div.row
+        %div.mt40
+          :css
+            .test_div_header {
+              background: #f00;
+              color: #fff;
+              width: 100%;
+              height: 50px;
+            }
+            .test_div_content {
+              position: fixed;
+            }
+            .test_div_content > div {
+              width: 100%;
+              background: #0f0;
+              color: #000;
+              padding: 10px;
+            }
+            .test_div_content input {
+              border: 1px solid #ccc;
+              padding: 10px;
+              margin: 10px;
+            }
+            .test_div_footer {
+              background: #00f;
+              color: #fff;
+            }
+            .demo_position_fixed {
+              position: fixed;
+              top: 0;
+              left: 0;
+            }
+          %div.mt30
+            %div.test_div_header.demo_position_fixed
+              %p テストヘッダー
+            %div.test_div_content
+              %div
+                %p テストコンテンツ
+                %input{:type => "text"}
+            %div.test_div_footer
+              - for i in 1..150
+                %p テストフッター #{i}
